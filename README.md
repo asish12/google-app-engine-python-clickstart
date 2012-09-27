@@ -1,4 +1,9 @@
-google-app-engine-python-clickstart
-===================================
+#Google App Engine Python ClickStart
 
-Clickstart for a sample Python Application deployed to Google App Engine
+<a href="https://grandcentral.cloudbees.com/#CB_clickstart=https://raw.github.com/recampbell/google-app-engine-python-clickstart/master/clickstart.json">Deploy this to Google App Engine via CloudBees DEV@Cloud</a>
+
+This is a simple Python application which is deployed to Google App Engine. Be aware of the following caveats:
+
+* This ClickStart assumes you've authorized your DEV@Cloud Jenkins to deploy to Google App Engine by visiting https://appengine.cloudbees.com
+
+* The tries to deploy to the application ID you provide when creating the ClickStart. If this fails, you can edit the job and click "Advanced" in the "Deploy Python Application to Google App Engine". Jenkins will then prompt you to create the application ID on Google App Engine, or you can change the application ID to one that already exists.
