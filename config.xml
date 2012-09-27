@@ -73,7 +73,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <com.cloudbees.jenkins.plugins.gaedeployer.GAEPythonDeployer>
-      <applicationDir>src</applicationDir>
+      <applicationDir>src/webapp</applicationDir>
       <!--userId>user@gmail.com</userId-->
       <updateBackends>false</updateBackends>
       <applicationId>${applicationName}</applicationId>
