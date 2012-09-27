@@ -1,6 +1,6 @@
 #Google App Engine Python ClickStart
 
-<a href="https://grandcentral.cloudbees.com/#CB_clickstart=https://raw.github.com/recampbell/google-app-engine-python-clickstart/master/clickstart.json">Deploy this to Google App Engine via CloudBees DEV@Cloud</a>
+<a href="https://grandcentral.cloudbees.com/#CB_clickstart=https://raw.github.com/CloudBees-community/google-app-engine-python-clickstart/master/clickstart.json">Deploy this to Google App Engine via CloudBees DEV@Cloud</a>
 
 This is a simple Python application which is deployed to Google App Engine. Be aware of the following caveats:
 
