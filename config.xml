@@ -74,13 +74,13 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
-	python --version 
-	nosetests --with-xunit src/test/test.py 
+python --version 
+nosetests --with-xunit src/test/test.py 
 
-	# You can use virtualenv, too! 
-	#virtualenv -q myenv 
-	#source ./myenv/bin/activate 
-	#pip install simplejson
+# You can use virtualenv, too! 
+#virtualenv -q myenv 
+#source ./myenv/bin/activate 
+#pip install simplejson
       </command>
     </hudson.tasks.Shell>
     <com.cloudbees.jenkins.plugins.gaedeployer.GAEPythonDeployer>
