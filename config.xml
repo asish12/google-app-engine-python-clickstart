@@ -6,7 +6,7 @@
     <daysToKeep>60</daysToKeep>
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
-    <artifactNumToKeep>20</artifactNumToKeep>
+    <artifactNumToKeep>1</artifactNumToKeep>
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
@@ -72,14 +72,24 @@
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
+    <hudson.tasks.Shell>
+      <command>
+	python --version nosetests --with-xunit src/test/test.py # You can use virtualenv, too! #virtualenv -q myenv #source ./myenv/bin/activate #pip install simplejson
+      </command>
+    </hudson.tasks.Shell>
     <com.cloudbees.jenkins.plugins.gaedeployer.GAEPythonDeployer>
       <applicationDir>src/webapp</applicationDir>
-      <!--userId>user@gmail.com</userId-->
       <updateBackends>false</updateBackends>
       <applicationId>${applicationName}</applicationId>
       <applicationVersion>${JOB_NAME}-${BUILD_NUMBER}</applicationVersion>
     </com.cloudbees.jenkins.plugins.gaedeployer.GAEPythonDeployer>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>nosetests.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
+  </publishers>
   <buildWrappers/>
 </project>
