@@ -89,6 +89,11 @@ nosetests --with-xunit src/test/test.py
       <applicationId>${applicationName}</applicationId>
       <applicationVersion>${JOB_NAME}-${BUILD_NUMBER}</applicationVersion>
     </com.cloudbees.jenkins.plugins.gaedeployer.GAEPythonDeployer>
+    <hudson.tasks.Shell>
+      <command>
+echo Congratulations! Your application is now deployed at http://${JOB_NAME}-${BUILD_NUMBER}.${JOB_NAME}.appspot.com
+      </command>
+  </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.junit.JUnitResultArchiver>
